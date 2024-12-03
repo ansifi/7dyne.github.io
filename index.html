@@ -4,8 +4,250 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ansif P I | Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
 </head>
+<style>
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Header Styles */
+header {
+  background-color: #2C3E50;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #1abc9c;
+}
+
+/* Section Styles */
+section {
+  padding: 60px 0;
+  margin-bottom: 40px;
+  border-radius: 8px;
+}
+
+/* About Section */
+#about {
+  background-color: #ecf0f1;
+}
+
+#about h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+ul.info-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.info-list li {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+/* Projects Section */
+#projects {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+#projects h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #2C3E50;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 48%;
+  transition: transform 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #1abc9c;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.project a:hover {
+  color: #2C3E50;
+}
+
+/* Startups Section */
+#startups {
+  background-color: #f1c40f;
+  color: #2C3E50;
+  padding: 40px 0;
+  text-align: center;
+  border-radius: 8px;
+}
+
+#startups p {
+  font-size: 1.3em;
+}
+
+/* Blogs Section */
+#blogs {
+  background-color: #ecf0f1;
+  padding: 40px 0;
+  text-align: center;
+}
+
+#blogs h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #2C3E50;
+}
+
+.blog-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.blog-list li {
+  margin: 10px 0;
+}
+
+.blog-list a {
+  color: #1abc9c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.blog-list a:hover {
+  color: #2C3E50;
+}
+
+/* Contact Section */
+#contact {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px 0;
+  text-align: center;
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+form input, form textarea {
+  padding: 12px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 80%;
+  max-width: 600px;
+}
+
+form button {
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  width: 80%;
+  max-width: 600px;
+}
+
+form button:hover {
+  background-color: #16a085;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #2C3E50;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1.1em;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #1abc9c;
+}
+</style>
+
 <body>
   <!-- Header Section -->
   <header>
