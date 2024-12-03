@@ -98,23 +98,25 @@ ul.info-list li {
   font-size: 1.1em;
 }
 
-/* Projects Section */
-#projects {
+/* Employer Projects Section */
+#client-projects {
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  padding: 40px 0;
 }
 
-#projects h2 {
+#client-projects h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
   color: #2C3E50;
 }
 
-.project-grid {
+.project-overview {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: space-between;
 }
 
 .project {
@@ -130,17 +132,35 @@ ul.info-list li {
   transform: translateY(-10px);
 }
 
-.project a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #1abc9c;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
+.project h3 {
+  font-size: 1.8em;
+  color: #2C3E50;
+  margin-bottom: 10px;
 }
 
-.project a:hover {
-  color: #2C3E50;
+.project p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.project ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.project ul li {
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+.project ul li strong {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .project {
+    width: 100%; /* Full width on small screens */
+  }
 }
 
 /* Startups Section */
@@ -318,6 +338,7 @@ footer a:hover {
     width: 100%; /* Full width on small screens */
   }
 }
+
 </style>
 
 <body>
@@ -373,68 +394,68 @@ footer a:hover {
   
   <!-- Client Projects Section -->
 	<section id="client-projects" class="block">
-		<div class="container">
-			<h2>Employer Projects</h2>
-			<div class="project-overview">
-				<div class="project">
-					<h3>CSR Informatics Gmbh, Germany</h3>
-					<p><strong>Role:</strong> Remote Full Stack Developer</p>
-					<ul>
-						<li><strong>Zoho Recruit Automation Project:</strong> Python-driven recruitment automation with OpenAI integration.</li>
-						<li><strong>E-commerce Platform Development:</strong> Custom e-commerce dashboard with AI-powered web scraping.</li>
-						<li><strong>Restaurant Analytics Dashboard:</strong> Data analytics dashboard with advanced visualisation.</li>
-					</ul>
-				</div>
+	<div class="container">
+		<h2>Employer Projects</h2>
+		<div class="project-overview">
+			<div class="project-box">
+				<h3>CSR Informatics Gmbh, Germany</h3>
+				<p><strong>Role:</strong> Remote Full Stack Developer</p>
+				<ul>
+					<li><strong>Zoho Recruit Automation Project:</strong> Python-driven recruitment automation with OpenAI integration.</li>
+					<li><strong>E-commerce Platform Development:</strong> Custom e-commerce dashboard with AI-powered web scraping.</li>
+					<li><strong>Restaurant Analytics Dashboard:</strong> Data analytics dashboard with advanced visualisation.</li>
+				</ul>
+			</div>
 
-				<div class="project">
-					<h3>Niaga Prestasi Sdn Bhd, Malaysia</h3>
-					<p><strong>Role:</strong> Remote Full Stack Developer</p>
-					<ul>
-						<li><strong>RedDotPayment CRM System:</strong> CRM for payment management with SQL and QR capabilities.</li>
-						<li><strong>Ethereum Wallet Project:</strong> Ethereum wallet app with React and Web3.js integration.</li>
-						<li><strong>TLMS Logistics Management System:</strong> Logistics management system with Laravel and Vue.js.</li>
-					</ul>
-				</div>
+			<div class="project-box">
+				<h3>Niaga Prestasi Sdn Bhd, Malaysia</h3>
+				<p><strong>Role:</strong> Remote Full Stack Developer</p>
+				<ul>
+					<li><strong>RedDotPayment CRM System:</strong> CRM for payment management with SQL and QR capabilities.</li>
+					<li><strong>Ethereum Wallet Project:</strong> Ethereum wallet app with React and Web3.js integration.</li>
+					<li><strong>TLMS Logistics Management System:</strong> Logistics management system with Laravel and Vue.js.</li>
+				</ul>
+			</div>
 
-				<div class="project">
-					<h3>HCL Technologies, India</h3>
-					<p><strong>Role:</strong> Lead C++ Developer</p>
-					<ul>
-						<li><strong>HMI System for Defence Communication:</strong> Qt C++ based HMI system for Panasonic's defence communication.</li>
-					</ul>
-				</div>
+			<div class="project-box">
+				<h3>HCL Technologies, India</h3>
+				<p><strong>Role:</strong> Lead C++ Developer</p>
+				<ul>
+					<li><strong>HMI System for Defence Communication:</strong> Qt C++ based HMI system for Panasonic's defence communication.</li>
+				</ul>
+			</div>
 
-				<div class="project">
-					<h3>Freelancer, India</h3>
-					<p><strong>Role:</strong> Freelance C++ Developer</p>
-					<ul>
-						<li><strong>Code Review Tool:</strong> C++ code review tool with Qt interface and Wt web functionality.</li>
-						<li><strong>Trading System API:</strong> Qt UI for displaying trading data and charts.</li>
-						<li><strong>Wise Owl Property Management:</strong> Web admin dashboard for property management.</li>
-						<li><strong>Montal 2D Games:</strong> Developed 2D game using Qt QML.</li>
-					</ul>
-				</div>
+			<div class="project-box">
+				<h3>Freelancer, India</h3>
+				<p><strong>Role:</strong> Freelance C++ Developer</p>
+				<ul>
+					<li><strong>Code Review Tool:</strong> C++ code review tool with Qt interface and Wt web functionality.</li>
+					<li><strong>Trading System API:</strong> Qt UI for displaying trading data and charts.</li>
+					<li><strong>Wise Owl Property Management:</strong> Web admin dashboard for property management.</li>
+					<li><strong>Montal 2D Games:</strong> Developed 2D game using Qt QML.</li>
+				</ul>
+			</div>
 
-				<div class="project">
-					<h3>Hexosys SDN BHD, Malaysia</h3>
-					<p><strong>Role:</strong> Software Engineer</p>
-					<ul>
-						<li><strong>USB Protocol Testing Application:</strong> C++ Qt-based USB protocol testing for firmware.</li>
-					</ul>
-				</div>
+			<div class="project-box">
+				<h3>Hexosys SDN BHD, Malaysia</h3>
+				<p><strong>Role:</strong> Software Engineer</p>
+				<ul>
+					<li><strong>USB Protocol Testing Application:</strong> C++ Qt-based USB protocol testing for firmware.</li>
+				</ul>
+			</div>
 
-				<div class="project">
-					<h3>Integral & UCI Tech, India</h3>
-					<p><strong>Role:</strong> Trainee Software Engineer</p>
-					<ul>
-						<li><strong>Pathmodeler USB Modelling Application:</strong> VC++ USB modelling application for device communication.</li>
-						<li><strong>Internet Explorer Toolbar:</strong> Developed browser toolbar with customized features.</li>
-						<li><strong>Void Trading:</strong> Worked on trading system functionalities for financial platforms.</li>
-					</ul>
-				</div>
+			<div class="project-box">
+				<h3>Integral & UCI Tech, India</h3>
+				<p><strong>Role:</strong> Trainee Software Engineer</p>
+				<ul>
+					<li><strong>Pathmodeler USB Modelling Application:</strong> VC++ USB modelling application for device communication.</li>
+					<li><strong>Internet Explorer Toolbar:</strong> Developed browser toolbar with customized features.</li>
+					<li><strong>Void Trading:</strong> Worked on trading system functionalities for financial platforms.</li>
+				</ul>
 			</div>
 		</div>
-	</section>
+	</div>
+</section>
 
 
   <!-- Startups Section -->
