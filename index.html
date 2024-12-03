@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ansif P I | Portfolio</title>
 </head>
+
 <style>
 /* General Styles */
 * {
@@ -151,8 +152,42 @@ ul.info-list li {
   border-radius: 8px;
 }
 
-#startups p {
-  font-size: 1.3em;
+#startups h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.startup-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.startup {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 48%;
+  transition: transform 0.3s;
+}
+
+.startup:hover {
+  transform: translateY(-10px);
+}
+
+.startup a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #1abc9c;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.startup a:hover {
+  color: #2C3E50;
 }
 
 /* Blogs Section */
@@ -168,22 +203,34 @@ ul.info-list li {
   color: #2C3E50;
 }
 
-.blog-list {
-  list-style: none;
-  padding-left: 0;
+.blog-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
-.blog-list li {
-  margin: 10px 0;
+.blog {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 48%;
+  transition: transform 0.3s;
 }
 
-.blog-list a {
+.blog:hover {
+  transform: translateY(-10px);
+}
+
+.blog a {
   color: #1abc9c;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
-.blog-list a:hover {
+.blog a:hover {
   color: #2C3E50;
 }
 
@@ -246,6 +293,17 @@ footer a {
 footer a:hover {
   color: #1abc9c;
 }
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+  .project-grid, .startup-grid, .blog-grid {
+    grid-template-columns: 1fr; /* Stack items on small screens */
+  }
+
+  .project, .startup, .blog {
+    width: 100%; /* Full width on small screens */
+  }
+}
 </style>
 
 <body>
@@ -298,25 +356,38 @@ footer a:hover {
   </section>
 
   <!-- Startups Section -->
-  <section id="startups" class="block-alt">
-    <div class="container">
-      <h2>Startups</h2>
-      <p><strong>SevenDyne:</strong> A tech solutions company specializing in app development, HR management software, and professional training. Visit: <a href="https://sevendyne.com" target="_blank">SevenDyne.com</a></p>
-    </div>
-  </section>
+	<!-- Startups Section -->
+	<section id="startups" class="block-alt">
+	  <div class="container">
+		<h2>Startups</h2>
+		<div class="startup-grid">
+		  <div class="startup">
+			<h3>SevenDyne</h3>
+			<p>A tech solutions company specializing in app development, HR management software, and professional training.</p>
+			<a href="https://sevendyne.com" target="_blank">Visit SevenDyne</a>
+		  </div>
+		  <!-- Add more startup blocks here if needed -->
+		</div>
+	  </div>
+	</section>
 
-  <!-- Blogs Section -->
-  <section id="blogs" class="block">
-    <div class="container">
-      <h2>Blogs</h2>
-      <p>Explore my latest blog posts on technology, development practices, and more.</p>
-      <ul class="blog-list">
-        <li><a href="https://ansifpi.medium.com/docker-postgresql-815ff8ba9499" target="_blank">Docker & PostgreSQL</a></li>
-        <li><a href="https://medium.com/@ansifpi/web-development-tips-5e4fbe9dc13e" target="_blank">Web Development Tips</a></li>
-        <!-- Add more blog links here -->
-      </ul>
-    </div>
-  </section>
+	<!-- Blogs Section -->
+	<section id="blogs" class="block">
+	  <div class="container">
+		<h2>Blogs</h2>
+		<div class="blog-grid">
+		  <div class="blog">
+			<h3><a href="https://ansifpi.medium.com/docker-postgresql-815ff8ba9499" target="_blank">Docker & PostgreSQL</a></h3>
+			<p>An in-depth guide on integrating Docker with PostgreSQL databases for efficient containerization and deployment.</p>
+		  </div>
+		  <div class="blog">
+			<h3><a href="https://medium.com/@ansifpi/web-development-tips-5e4fbe9dc13e" target="_blank">Web Development Tips</a></h3>
+			<p>Explore some key tips for better web development practices, from performance optimization to best coding habits.</p>
+		  </div>
+		  <!-- Add more blog blocks here -->
+		</div>
+	  </div>
+	</section>
 
   <!-- Contact Section -->
   <section id="contact" class="block-alt">
