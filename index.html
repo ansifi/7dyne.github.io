@@ -6,7 +6,6 @@
   <title>Ansif P I | Portfolio</title>
 </head>
 
-<style>
 /* General Styles */
 * {
   margin: 0;
@@ -234,6 +233,20 @@ ul.info-list li {
   color: #2C3E50;
 }
 
+/* Read More link styles */
+.blog .read-more {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.blog .read-more:hover {
+  color: #2980b9;
+}
+
 /* Contact Section */
 #contact {
   background-color: #ffffff;
@@ -304,7 +317,7 @@ footer a:hover {
     width: 100%; /* Full width on small screens */
   }
 }
-</style>
+
 
 <body>
   <!-- Header Section -->
@@ -356,6 +369,72 @@ footer a:hover {
       </div>
     </div>
   </section>
+  
+  <!-- Client Projects Section -->
+	<section id="client-projects" class="block">
+		<div class="container">
+			<h2>Employer Projects</h2>
+			<div class="project-overview">
+				<div class="project">
+					<h3>CSR Informatics Gmbh, Germany</h3>
+					<p><strong>Role:</strong> Remote Full Stack Developer</p>
+					<ul>
+						<li><strong>Zoho Recruit Automation Project:</strong> Python-driven recruitment automation with OpenAI integration.</li>
+						<li><strong>E-commerce Platform Development:</strong> Custom e-commerce dashboard with AI-powered web scraping.</li>
+						<li><strong>Restaurant Analytics Dashboard:</strong> Data analytics dashboard with advanced visualisation.</li>
+					</ul>
+				</div>
+
+				<div class="project">
+					<h3>Niaga Prestasi Sdn Bhd, Malaysia</h3>
+					<p><strong>Role:</strong> Remote Full Stack Developer</p>
+					<ul>
+						<li><strong>RedDotPayment CRM System:</strong> CRM for payment management with SQL and QR capabilities.</li>
+						<li><strong>Ethereum Wallet Project:</strong> Ethereum wallet app with React and Web3.js integration.</li>
+						<li><strong>TLMS Logistics Management System:</strong> Logistics management system with Laravel and Vue.js.</li>
+					</ul>
+				</div>
+
+				<div class="project">
+					<h3>HCL Technologies, India</h3>
+					<p><strong>Role:</strong> Lead C++ Developer</p>
+					<ul>
+						<li><strong>HMI System for Defence Communication:</strong> Qt C++ based HMI system for Panasonic's defence communication.</li>
+					</ul>
+				</div>
+
+				<div class="project">
+					<h3>Freelancer, India</h3>
+					<p><strong>Role:</strong> Freelance C++ Developer</p>
+					<ul>
+						<li><strong>Code Review Tool:</strong> C++ code review tool with Qt interface and Wt web functionality.</li>
+						<li><strong>Trading System API:</strong> Qt UI for displaying trading data and charts.</li>
+						<li><strong>Wise Owl Property Management:</strong> Web admin dashboard for property management.</li>
+						<li><strong>Montal 2D Games:</strong> Developed 2D game using Qt QML.</li>
+					</ul>
+				</div>
+
+				<div class="project">
+					<h3>Hexosys SDN BHD, Malaysia</h3>
+					<p><strong>Role:</strong> Software Engineer</p>
+					<ul>
+						<li><strong>USB Protocol Testing Application:</strong> C++ Qt-based USB protocol testing for firmware.</li>
+					</ul>
+				</div>
+
+				<div class="project">
+					<h3>Integral & UCI Tech, India</h3>
+					<p><strong>Role:</strong> Trainee Software Engineer</p>
+					<ul>
+						<li><strong>Pathmodeler USB Modelling Application:</strong> VC++ USB modelling application for device communication.</li>
+						<li><strong>Internet Explorer Toolbar:</strong> Developed browser toolbar with customized features.</li>
+						<li><strong>Void Trading:</strong> Worked on trading system functionalities for financial platforms.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
 
   <!-- Startups Section -->
 	<!-- Startups Section -->
@@ -378,16 +457,19 @@ footer a:hover {
 	  <div class="container">
 		<h2>Blogs</h2>
 		<div class="blog-grid">
-		  <div class="blog">
-			<h3><a href="https://ansifpi.medium.com/docker-postgresql-815ff8ba9499" target="_blank">Docker & PostgreSQL</a></h3>
-			<p>An in-depth guide on integrating Docker with PostgreSQL databases for efficient containerization and deployment.</p>
-		  </div>
-		  <div class="blog">
-			<h3><a href="https://medium.com/@ansifpi/web-development-tips-5e4fbe9dc13e" target="_blank">Web Development Tips</a></h3>
-			<p>Explore some key tips for better web development practices, from performance optimization to best coding habits.</p>
-		  </div>
-		  <!-- Add more blog blocks here -->
+			<div class="blog">
+				<h3><a href="https://ansifpi.medium.com/docker-postgresql-815ff8ba9499" target="_blank">Docker & PostgreSQL</a></h3>
+				<p>An in-depth guide on integrating Docker with PostgreSQL databases for efficient containerization and deployment.</p>
+				<a href="https://ansifpi.medium.com/docker-postgresql-815ff8ba9499" class="read-more" target="_blank">Read More</a>
+			</div>
+			<div class="blog">
+				<h3><a href="https://medium.com/@ansifpi/web-development-tips-5e4fbe9dc13e" target="_blank">Web Development Tips</a></h3>
+				<p>Explore some key tips for better web development practices, from performance optimization to best coding habits.</p>
+				<a href="https://medium.com/@ansifpi/web-development-tips-5e4fbe9dc13e" class="read-more" target="_blank">Read More</a>
+			</div>
+			<!-- Add more blog blocks here -->
 		</div>
+
 	  </div>
 	</section>
 
@@ -399,8 +481,8 @@ footer a:hover {
 		<p>If you would like to get in touch, feel free to reach out to me through email or WhatsApp:</p>
 		
 		<ul>
-		  <li><strong>Email:</strong> <a href="mailto:ansif.pi@gmail.com">ansif.pi@gmail.com</a></li>
-		  <li><strong>WhatsApp:</strong> <a href="https://wa.me/919544467629" target="_blank">+91 95444 67629</a></li>
+		  <strong>Email:</strong> <a href="mailto:ansif.pi@gmail.com">ansif.pi@gmail.com</a>
+		  <strong>WhatsApp:</strong> <a href="https://wa.me/919544467629" target="_blank">+91 95444 67629</a>
 		</ul>
 	  </div>
 	</section>
