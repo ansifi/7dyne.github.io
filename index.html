@@ -75,7 +75,7 @@ section {
 
 /* About Section */
 #about {
-  background-color: #ecf0f1;
+  background-color: #ffffff;
 }
 
 #about h2 {
@@ -112,13 +112,17 @@ ul.info-list li {
   color: #2C3E50;
 }
 
-.project-overview {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
+#solutions {
+  background-color: #ecf0f1;
+  padding: 40px 0;
 }
 
+#solutions h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #2C3E50;
+}
+		
 .project {
   background-color: #ffffff;
   padding: 20px;
@@ -126,6 +130,42 @@ ul.info-list li {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 48%;
   transition: transform 0.3s;
+}
+
+.project-overview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Client Projects Grid */
+.project-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 1.5rem;
+}
+
+.project-card {
+	background-color: var(--background-light);
+	border-radius: 8px;
+	padding: 1.5rem;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+	transform: translateY(-10px);
+}
+
+.project-card h3 {
+	color: var(--primary-color);
+	margin-bottom: 1rem;
+}
+
+.project-card ul {
+	list-style-type: none;
+	padding-left: 0;
 }
 
 .project:hover {
@@ -157,57 +197,10 @@ ul.info-list li {
   font-weight: bold;
 }
 
-@media (max-width: 768px) {
+@project (max-width: 768px) {
   .project {
     width: 100%; /* Full width on small screens */
   }
-}
-
-/* Startups Section */
-#startups {
-  background-color: #f1c40f;
-  color: #2C3E50;
-  padding: 40px 0;
-  text-align: center;
-  border-radius: 8px;
-}
-
-#startups h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
-.startup-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.startup {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 48%;
-  transition: transform 0.3s;
-}
-
-.startup:hover {
-  transform: translateY(-10px);
-}
-
-.startup a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #1abc9c;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.startup a:hover {
-  color: #2C3E50;
 }
 
 /* Blogs Section */
@@ -277,39 +270,6 @@ ul.info-list li {
   border-radius: 8px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-}
-
-form input, form textarea {
-  padding: 12px;
-  font-size: 1em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 80%;
-  max-width: 600px;
-}
-
-form button {
-  background-color: #1abc9c;
-  color: white;
-  border: none;
-  padding: 12px;
-  font-size: 1.1em;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-  width: 80%;
-  max-width: 600px;
-}
-
-form button:hover {
-  background-color: #16a085;
-}
-
 /* Footer Styles */
 footer {
   background-color: #2C3E50;
@@ -330,11 +290,11 @@ footer a:hover {
 
 /* Responsive layout adjustments */
 @media (max-width: 768px) {
-  .project-grid, .startup-grid, .blog-grid {
+  .project-grid, .blog-grid {
     grid-template-columns: 1fr; /* Stack items on small screens */
   }
 
-  .project, .startup, .blog {
+  .project, .blog {
     width: 100%; /* Full width on small screens */
   }
 }
@@ -350,8 +310,8 @@ footer a:hover {
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#startups">Startups</a></li>
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#client-projects">Clients</a></li>
           <li><a href="#blogs">Blogs</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -360,7 +320,7 @@ footer a:hover {
   </header>
 
   <!-- About Section -->
-  <section id="about" class="block">
+  <section id="about" class="block-alt">
     <div class="container">
       <h2>About Me</h2>
       <p>
@@ -374,13 +334,14 @@ footer a:hover {
       </ul>
     </div>
   </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="block">
-    <div class="container">
-      <h2>GitHub Projects</h2>
+  
+  
+<!-- Projects Section -->
+  <section id="solutions" class="block-alt">
+	  <div class="container">
+		<h2>Solutions</h2>
       <div class="project-grid">
-        <div class="project">
+        <div class="project-card">
           <h3>Email Automation Tool</h3>
           <p>Automates email scraping and sending using Scrapy and Python. Saves results to CSV files.</p>
           <a href="https://github.com/ansifi/email_automation_tool" target="_blank">View on GitHub</a>
@@ -391,11 +352,11 @@ footer a:hover {
   </section>
   
 	<!-- Client Projects Section -->
-	<section id="client-projects" class="block">
+	<section id="client-projects" class="block-alt">
 	  <div class="container">
-		<h2>Employer Projects</h2>
+		<h2>Client/Employer Projects</h2>
 		<div class="project-grid">
-		  <div class="project">
+		  <div class="project-card">
 			<h3><a href="https://www.csr-informatics.com" target="_blank">CSR Informatics GmbH, Germany</a></h3>
 			<p><strong>Role:</strong> Remote Full Stack Developer</p>
 			<ul>
@@ -406,7 +367,7 @@ footer a:hover {
 			<a href="https://csr-informatik.de/" class="read-more" target="_blank">Read More</a>
 		  </div>
 
-		  <div class="project">
+		  <div class="project-card">
 			<h3><a href="https://www.niagaprestasi.com" target="_blank">Niaga Prestasi Sdn Bhd, Malaysia</a></h3>
 			<p><strong>Role:</strong> Remote Full Stack Developer</p>
 			<ul>
@@ -417,7 +378,7 @@ footer a:hover {
 			<a href="https://www.niagaprestasi.com" class="read-more" target="_blank">Read More</a>
 		  </div>
 
-		  <div class="project">
+		  <div class="project-card">
 			<h3><a href="https://www.hcltech.com" target="_blank">HCL Technologies, India</a></h3>
 			<p><strong>Role:</strong> Lead C++ Developer</p>
 			<ul>
@@ -426,7 +387,7 @@ footer a:hover {
 			<a href="https://www.hcltech.com" class="read-more" target="_blank">Read More</a>
 		  </div>
 
-		  <div class="project">
+		  <div class="project-card">
 			<p><strong>Role:</strong> Freelance C++ Developer</p>
 			<ul>
 			  <li><strong>Code Review Tool:</strong> C++ code review tool with Qt interface and Wt web functionality.</li>
@@ -436,7 +397,7 @@ footer a:hover {
 			</ul>
 		  </div>
 
-		  <div class="project">
+		  <div class="project-card">
 			<h3><a href="https://www.hexosys.com" target="_blank">Hexosys SDN BHD, Malaysia</a></h3>
 			<p><strong>Role:</strong> Software Engineer</p>
 			<ul>
@@ -445,7 +406,7 @@ footer a:hover {
 			<a href="https://www.hexosys.com" class="read-more" target="_blank">Read More</a>
 		  </div>
 
-		  <div class="project">
+		  <div class="project-card">
 			<p><strong>Role:</strong> Trainee Software Engineer</p>
 			<ul>
 			  <li><strong>Pathmodeler USB Modelling Application:</strong> VC++ USB modelling application for device communication.</li>
@@ -457,9 +418,8 @@ footer a:hover {
 	  </div>
 	</section>
 
-
 	<!-- Blogs Section -->
-	<section id="blogs" class="block">
+	<section id="blogs" class="block-alt">
 	  <div class="container">
 		<h2>Blogs</h2>
 		<div class="blog-grid">
