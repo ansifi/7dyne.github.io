@@ -20,13 +20,14 @@
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
         }
-        header {
+        header, .section-title {
             background: #333;
             color: white;
-            padding: 20px 0;
+            padding: 15px;
             text-align: center;
-            font-size: 28px;
+            font-size: 24px;
             font-weight: bold;
+            border-radius: 5px;
         }
         footer {
             background: #333;
@@ -79,6 +80,13 @@
         ul li a:hover {
             text-decoration: underline;
         }
+        .post-tile {
+            background: #f9f9f9;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -90,27 +98,27 @@
         <h2>Investor & Startup Founder</h2>
         <p>Experienced entrepreneur and investor, passionate about building businesses, finding investment opportunities, and scaling startups.</p>
         
-        <h2>Experience</h2>
+        <div class="section-title">Experience</div>
         <p><strong>Software Developer (until 2024)</strong> - Worked on various projects, gaining hands-on experience in software development and technology solutions.</p>
         <p><strong>Founder & Managing Partner, Sevendyne (since 2016)</strong> - Built and scaled an IT company, hired and managed resources, secured local investors, and expanded business operations.</p>
         <p><strong>Investment Manager</strong> - Focused on identifying lucrative investment opportunities, managing funds, and supporting startups in various industries including IT, food, chemicals, and textiles.</p>
         
-        <h2>Ideas & Projects</h2>
+        <div class="section-title">Ideas & Projects</div>
         <p><strong>Email Automate Tool</strong> - Automates email scraping and sending using Scrapy and Python. Saves results to CSV files.<br>
         <a href="https://github.com/your-repo/email-automate" target="_blank">View on GitHub</a> | <a href="https://www.producthunt.com/posts/email-automate" target="_blank">Product Hunt</a></p>
         <p>Exploring new ideas and startups. Open to innovation and disruptive business opportunities.</p>
         
-        <h2>Posts</h2>
+        <div class="section-title">Posts</div>
         <ul>
-            <li><a href="https://medium.com/@ansifpi/solid-principles-1-single-responsibility-principle-srp-dec-13-2024" target="_blank">SOLID Principles - Single Responsibility Principle (SRP)</a> (Dec 13, 2024)</li>
-            <li><a href="https://medium.com/@ansifpi/email-automation-tool-dec-5-2024" target="_blank">Email Automation Tool</a> (Dec 5, 2024)</li>
-            <li><a href="https://medium.com/@ansifpi/component-communication-with-navbar-in-latest-angular-oct-15-2024" target="_blank">Component Communication with Navbar in Latest Angular</a> (Oct 15, 2024)</li>
-            <li><a href="https://medium.com/@ansifpi/essential-command-line-commands-for-developers-jun-8-2024" target="_blank">Essential Command-Line Commands for Developers</a> (Jun 8, 2024)</li>
-            <li><a href="https://medium.com/@ansifpi/docker-postgresql-feb-20-2024" target="_blank">Docker & PostgreSQL</a> (Feb 20, 2024)</li>
-            <li><a href="https://medium.com/@ansifpi/writing-good-cpp-code-jan-30-2024" target="_blank">Writing good C++ code</a> (Jan 30, 2024)</li>
+            <li class="post-tile"><a href="https://medium.com/@ansifpi/solid-principles-1-single-responsibility-principle-srp-dec-13-2024" target="_blank">SOLID Principles - Single Responsibility Principle (SRP)</a> (Dec 13, 2024)</li>
+            <li class="post-tile"><a href="https://medium.com/@ansifpi/email-automation-tool-dec-5-2024" target="_blank">Email Automation Tool</a> (Dec 5, 2024)</li>
+            <li class="post-tile"><a href="https://medium.com/@ansifpi/component-communication-with-navbar-in-latest-angular-oct-15-2024" target="_blank">Component Communication with Navbar in Latest Angular</a> (Oct 15, 2024)</li>
+            <li class="post-tile"><a href="https://medium.com/@ansifpi/essential-command-line-commands-for-developers-jun-8-2024" target="_blank">Essential Command-Line Commands for Developers</a> (Jun 8, 2024)</li>
+            <li class="post-tile"><a href="https://medium.com/@ansifpi/docker-postgresql-feb-20-2024" target="_blank">Docker & PostgreSQL</a> (Feb 20, 2024)</li>
+            <li class="post-tile"><a href="https://medium.com/@ansifpi/writing-good-cpp-code-jan-30-2024" target="_blank">Writing good C++ code</a> (Jan 30, 2024)</li>
         </ul>
         
-        <h2>Profiles</h2>
+        <div class="section-title">Profiles</div>
         <p>
             <a href="https://www.linkedin.com/in/ansifpi/" target="_blank">LinkedIn</a> |
             <a href="https://medium.com/@ansifpi" target="_blank">Medium</a> |
@@ -118,7 +126,7 @@
             <a href="https://x.com/anspi07" target="_blank">Twitter/X</a>
         </p>
         
-        <h2>Contact Me</h2>
+        <div class="section-title">Contact Me</div>
         <form class="contact-form">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
