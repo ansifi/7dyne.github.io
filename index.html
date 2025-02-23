@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ansif - Investor & Startup Founder</title>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -80,12 +81,36 @@
         ul li a:hover {
             text-decoration: underline;
         }
-        .post-tile {
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+        }
+        .grid-item {
             background: #f9f9f9;
             padding: 15px;
-            margin: 10px 0;
             border-radius: 5px;
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+        .popup button {
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            background: #333;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -99,41 +124,57 @@
         <p>Experienced entrepreneur and investor, passionate about building businesses, finding investment opportunities, and scaling startups.</p>
         
         <div class="section-title">Experience</div>
-        <p><strong>Software Developer (until 2024)</strong> - Worked on various projects, gaining hands-on experience in software development and technology solutions.</p>
-        <p><strong>Founder & Managing Partner, Sevendyne (since 2016)</strong> - Built and scaled an IT company, hired and managed resources, secured local investors, and expanded business operations.</p>
-        <p><strong>Investment Manager</strong> - Focused on identifying lucrative investment opportunities, managing funds, and supporting startups in various industries including IT, food, chemicals, and textiles.</p>
+        <div class="grid">
+            <div class="grid-item"><strong>Software Developer (until 2024)</strong><br>Worked on various projects, gaining hands-on experience in software development and technology solutions.</div>
+            <div class="grid-item"><strong>Founder & Managing Partner, Sevendyne (since 2016)</strong><br>Built and scaled an IT company, hired and managed resources, secured local investors, and expanded business operations.</div>
+            <div class="grid-item"><strong>Investment Manager</strong><br>Focused on identifying lucrative investment opportunities, managing funds, and supporting startups in various industries including IT, food, chemicals, and textiles.</div>
+        </div>
         
         <div class="section-title">Ideas & Projects</div>
-        <p><strong>Email Automate Tool</strong> - Automates email scraping and sending using Scrapy and Python. Saves results to CSV files.<br>
-        <a href="https://github.com/your-repo/email-automate" target="_blank">View on GitHub</a> | <a href="https://www.producthunt.com/posts/email-automate" target="_blank">Product Hunt</a></p>
-        <p>Exploring new ideas and startups. Open to innovation and disruptive business opportunities.</p>
+        <div class="grid">
+            <div class="grid-item"><strong>Email Automate Tool</strong><br>Automates email scraping and sending using Scrapy and Python. <a href="https://github.com/your-repo/email-automate" target="_blank">View on GitHub</a> | <a href="https://www.producthunt.com/posts/email-automate" target="_blank">Product Hunt</a></div>
+        </div>
         
         <div class="section-title">Posts</div>
-        <ul>
-            <li class="post-tile"><a href="https://medium.com/@ansifpi/solid-principles-1-single-responsibility-principle-srp-dec-13-2024" target="_blank">SOLID Principles - Single Responsibility Principle (SRP)</a> (Dec 13, 2024)</li>
-            <li class="post-tile"><a href="https://medium.com/@ansifpi/email-automation-tool-dec-5-2024" target="_blank">Email Automation Tool</a> (Dec 5, 2024)</li>
-            <li class="post-tile"><a href="https://medium.com/@ansifpi/component-communication-with-navbar-in-latest-angular-oct-15-2024" target="_blank">Component Communication with Navbar in Latest Angular</a> (Oct 15, 2024)</li>
-            <li class="post-tile"><a href="https://medium.com/@ansifpi/essential-command-line-commands-for-developers-jun-8-2024" target="_blank">Essential Command-Line Commands for Developers</a> (Jun 8, 2024)</li>
-            <li class="post-tile"><a href="https://medium.com/@ansifpi/docker-postgresql-feb-20-2024" target="_blank">Docker & PostgreSQL</a> (Feb 20, 2024)</li>
-            <li class="post-tile"><a href="https://medium.com/@ansifpi/writing-good-cpp-code-jan-30-2024" target="_blank">Writing good C++ code</a> (Jan 30, 2024)</li>
-        </ul>
-        
-        <div class="section-title">Profiles</div>
-        <p>
-            <a href="https://www.linkedin.com/in/ansifpi/" target="_blank">LinkedIn</a> |
-            <a href="https://medium.com/@ansifpi" target="_blank">Medium</a> |
-            <a href="https://www.crunchbase.com/person/ansif-ibrahimkutty" target="_blank">Crunchbase</a> |
-            <a href="https://x.com/anspi07" target="_blank">Twitter/X</a>
-        </p>
+        <div class="grid">
+            <div class="grid-item"><a href="https://medium.com/@ansifpi/solid-principles-1-single-responsibility-principle-srp-dec-13-2024" target="_blank">SOLID Principles - SRP</a> (Dec 13, 2024)</div>
+            <div class="grid-item"><a href="https://medium.com/@ansifpi/email-automation-tool-dec-5-2024" target="_blank">Email Automation Tool</a> (Dec 5, 2024)</div>
+        </div>
         
         <div class="section-title">Contact Me</div>
-        <form class="contact-form">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <form class="contact-form" onsubmit="sendEmail(event)">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
     </div>
+    <div class="popup" id="popup">
+        <p>Email sent! We will contact you soon.</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+    <script>
+        function sendEmail(event) {
+            event.preventDefault();
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "anspi07@gmail.com",
+                Password: "vdgc djem nagd elhh",  
+                To: "anspi07@gmail.com",
+                From: document.getElementById("email").value,
+                Subject: "New Contact Form Submission",
+                Body: `Name: ${document.getElementById("name").value} <br> 
+                       Email: ${document.getElementById("email").value} <br> 
+                       Message: ${document.getElementById("message").value}`
+            }).then(() => {
+                document.getElementById("popup").style.display = "block";
+            });
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
     <footer>
         &copy; 2025 Ansif. All rights reserved.
     </footer>
