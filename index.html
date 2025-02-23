@@ -1,167 +1,484 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ansif - Investor & Tech Entreprenuer</title>
-    <style>
-       body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            background: white;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-        header, .section-title {
-            background: #333;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-        footer {
-            background: #333;
-            color: white;
-            padding: 15px 0;
-            text-align: center;
-            margin-top: 30px;
-        }
-        h1, h2 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-        p {
-            color: #666;
-            line-height: 1.8;
-            font-size: 16px;
-        }
-        .contact-form {
-            text-align: left;
-            margin-top: 20px;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-        .contact-form button {
-            background-color: #333;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        ul li {
-            padding: 8px 0;
-        }
-        ul li a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        ul li a:hover {
-            text-decoration: underline;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 10px;
-        }
-        .grid-item {
-            background: #f9f9f9;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-        }
-        .popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
-        }
-        .popup button {
-            margin-top: 10px;
-            padding: 10px;
-            border: none;
-            background: #333;
-            color: white;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ansif P I | Portfolio</title>
 </head>
+
+<style>
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Header Styles */
+header {
+  background-color: #2C3E50;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #1abc9c;
+}
+
+/* Section Styles */
+section {
+  padding: 60px 0;
+  margin-bottom: 40px;
+  border-radius: 8px;
+}
+
+/* About Section */
+#about {
+  background-color: #ffffff;
+}
+
+#about h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+ul.info-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.info-list li {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+/* Employer Projects Section */
+#contract-projects {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 40px 0;
+}
+
+#contract-projects h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #2C3E50;
+}
+
+#github-projects {
+  background-color: #ecf0f1;
+  padding: 40px 0;
+}
+
+#github-projects h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #2C3E50;
+}
+		
+.project {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 48%;
+  transition: transform 0.3s;
+}
+
+.project-overview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Client Projects Grid */
+.project-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 1.5rem;
+}
+
+.project-card {
+	background-color: var(--background-light);
+	border-radius: 8px;
+	padding: 1.5rem;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+	transform: translateY(-10px);
+}
+
+.project-card h3 {
+	color: var(--primary-color);
+	margin-bottom: 1rem;
+}
+
+.project-card ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+}
+
+.project h3 {
+  font-size: 1.8em;
+  color: #2C3E50;
+  margin-bottom: 10px;
+}
+
+.project p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.project ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.project ul li {
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+.project ul li strong {
+  font-weight: bold;
+}
+
+@project (max-width: 768px) {
+  .project {
+    width: 100%; /* Full width on small screens */
+  }
+}
+
+/* Blogs Section */
+#blogs {
+  background-color: #ecf0f1;
+  padding: 40px 0;
+  text-align: center;
+}
+
+#blogs h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #2C3E50;
+}
+
+.blog-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.blog {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 48%;
+  transition: transform 0.3s;
+}
+
+.blog:hover {
+  transform: translateY(-10px);
+}
+
+.blog a {
+  color: #1abc9c;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.blog a:hover {
+  color: #2C3E50;
+}
+
+/* Read More link styles */
+.blog .read-more {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.blog .read-more:hover {
+  color: #2980b9;
+}
+
+/* Contact Section */
+#contact {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px 0;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #2C3E50;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1.1em;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #1abc9c;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+  .project-grid, .blog-grid {
+    grid-template-columns: 1fr; /* Stack items on small screens */
+  }
+
+  .project, .blog {
+    width: 100%; /* Full width on small screens */
+  }
+}
+.medium-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.medium-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.medium-link a:hover {
+  text-decoration: underline;
+}
+
+</style>
+
 <body>
-<header>
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-        <span style="font-size: 20px; font-weight: bold; color: white;">Ansif - Investor & Tech Entreprenuer</span>
-        <span>
-            <a href="https://www.linkedin.com/in/ansifpi/" target="_blank" style="color: #f4f4f4; text-decoration: none; margin-right: 15px;">LinkedIn</a>
-            <a href="https://medium.com/@ansifpi" target="_blank" style="color: #f4f4f4; text-decoration: none; margin-right: 15px;">Medium</a>
-            <a href="https://www.crunchbase.com/person/ansif-ibrahimkutty" target="_blank" style="color: #f4f4f4; text-decoration: none; margin-right: 15px;">Crunchbase</a>
-            <a href="https://x.com/anspi07" target="_blank" style="color: #f4f4f4; text-decoration: none;">Twitter/X</a>
-        </span>
-    </div>
-</header>
-
-<div class="container">
-        <h1>Ansif</h1>
-        <p>Experienced entrepreneur and investor, passionate about building businesses, finding investment opportunities, and scaling startups.</p>
-        <p><a href="mailto:anspi07@gmail.com" style="font-size: 18px; font-weight: bold; color: blue; text-decoration: none;">📧 Contact Me</a></p>
-
-        <div class="section-title">Experience</div>
-        <p><strong>Software Developer (until 2024)</strong> - Worked on various projects, gaining hands-on experience in software development and technology solutions.</p>
-        <p><strong>Founder & Managing Partner, Sevendyne (since 2016)</strong> - Built and scaled an IT company, hired and managed resources, secured local investors, and expanded business operations.</p>
-        <p><strong>Investment Manager</strong> - Focused on identifying lucrative investment opportunities, managing funds, and supporting startups in various industries including IT, food, chemicals, and textiles.</p>
-        
-        <div class="section-title">Ideas & Projects</div>
-        <p><strong>Email Automate Tool</strong> - Automates email scraping and sending using Scrapy and Python. Saves results to CSV files.<br>
-        <a href="https://github.com/your-repo/email-automate" target="_blank">View on GitHub</a> | <a href="https://www.producthunt.com/posts/email-automate" target="_blank">Product Hunt</a></p>
-        <p>Exploring new ideas and startups. Open to innovation and disruptive business opportunities.</p>
-        
-        <div class="section-title">Posts</div>
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1>Ansif P I</h1>
+      <p>Software Developer</p>
+      <nav>
         <ul>
-            <li class="post-tile"><a href="https://medium.com/@ansifpi/solid-principles-1-single-responsibility-principle-srp-dec-13-2024" target="_blank">SOLID Principles - Single Responsibility Principle (SRP)</a> (Dec 13, 2024)</li>
-            <li class="post-tile"><a href="https://medium.com/@ansifpi/email-automation-tool-dec-5-2024" target="_blank">Email Automation Tool</a> (Dec 5, 2024)</li>
-            <li class="post-tile"><a href="https://medium.com/@ansifpi/component-communication-with-navbar-in-latest-angular-oct-15-2024" target="_blank">Component Communication with Navbar in Latest Angular</a> (Oct 15, 2024)</li>
-            <li class="post-tile"><a href="https://medium.com/@ansifpi/essential-command-line-commands-for-developers-jun-8-2024" target="_blank">Essential Command-Line Commands for Developers</a> (Jun 8, 2024)</li>
-            <li class="post-tile"><a href="https://medium.com/@ansifpi/docker-postgresql-feb-20-2024" target="_blank">Docker & PostgreSQL</a> (Feb 20, 2024)</li>
-            <li class="post-tile"><a href="https://medium.com/@ansifpi/writing-good-cpp-code-jan-30-2024" target="_blank">Writing good C++ code</a> (Jan 30, 2024)</li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#github-projects">Github Projects</a></li>
+          <li><a href="#contract-projects">Contract Projects</a></li>
+          <li><a href="#blogs">Blogs</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-        
-        <div class="section-title">Profiles</div>
-        <p>
-            <a href="https://www.linkedin.com/in/ansifpi/" target="_blank">LinkedIn</a> |
-            <a href="https://medium.com/@ansifpi" target="_blank">Medium</a> |
-            <a href="https://www.crunchbase.com/person/ansif-ibrahimkutty" target="_blank">Crunchbase</a> |
-            <a href="https://x.com/anspi07" target="_blank">Twitter/X</a>
-        </p>
-
+      </nav>
     </div>
-     <footer>
-        &copy; 2025 Ansif. All rights reserved.
-    </footer>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="block-alt">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        Highly accomplished IT professional with over 17 years of experience in software development. 
+        Skilled in C++, Full Stack Development, DevOps, and AI-driven solutions. </p>
+	  <p>	
+      <ul class="info-list">
+        <li><strong>Email:</strong> <a href="mailto:anspi07@gmail.com">anspi07@gmail.com</a>
+		  <strong>, </strong> <a href="mailto:ansif.pi@gmail.com">ansif.pi@gmail.com</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/ansifi" target="_blank">github.com/ansifi</a></li>
+        <li><strong>Phone:</strong> (+91) 9544467629</li>
+      </ul>
+    </div>
+  </section>
+  
+  
+<!-- Projects Section -->
+  <section id="github-projects" class="block-alt">
+	  <div class="container">
+		<h2>Github Projects</h2>
+		<p>Check out my <a href="https://github.com/ansifi" target="_blank">Github profile</a>.</p>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Email Automation Tool</h3>
+          <p>Automates email scraping and sending using Scrapy and Python. Saves results to CSV files.</p>
+          <a href="https://github.com/ansifi/email_automation_tool" target="_blank">View on GitHub</a>
+		  <a href="https://www.producthunt.com/posts/email-automate-free-github-project?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-email&#0045;automate&#0045;free&#0045;github&#0045;project" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=685314&theme=light" alt="Email&#0032;Automate&#0032;&#0045;&#0032;Free&#0032;GitHub&#0032;Project - Email&#0032;automation&#0032;tool | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+        </div>
+        <!-- Add more projects here -->
+		
+		
+      </div>
+    </div>
+  </section>
+  
+	<!-- Client Projects Section -->
+	<section id="contract-projects" class="block-alt">
+	  <div class="container">
+		<h2>Contract Projects - Remote & Onsite</h2>
+		<div class="project-grid">
+		  <div class="project-card">
+			<h3><a href="https://www.csr-informatics.com" target="_blank">CSR Informatics GmbH, Germany</a></h3>
+			<p><strong>Role:</strong> Remote Full Stack Developer</p>
+			<ul>
+			  <li><strong>Zoho Recruit Automation Project:</strong> Python-driven recruitment automation with OpenAI integration.</li>
+			  <li><strong>E-commerce Platform Development:</strong> Custom e-commerce dashboard with AI-powered web scraping.</li>
+			  <li><strong>Restaurant Analytics Dashboard:</strong> Data analytics dashboard with advanced visualisation.</li>
+			</ul>
+			<a href="https://csr-informatik.de/" class="read-more" target="_blank">Read More</a>
+		  </div>
+
+		  <div class="project-card">
+			<h3><a href="https://www.niagaprestasi.com" target="_blank">Niaga Prestasi Sdn Bhd, Malaysia</a></h3>
+			<p><strong>Role:</strong> Remote Full Stack Developer</p>
+			<ul>
+			  <li><strong>RedDotPayment CRM System:</strong> CRM for payment management with SQL and QR capabilities.</li>
+			  <li><strong>Ethereum Wallet Project:</strong> Ethereum wallet app with React and Web3.js integration.</li>
+			  <li><strong>TLMS Logistics Management System:</strong> Logistics management system with Laravel and Vue.js.</li>
+			</ul>
+			<a href="https://www.niagaprestasi.com" class="read-more" target="_blank">Read More</a>
+		  </div>
+
+		  <div class="project-card">
+			<h3><a href="https://www.hcltech.com" target="_blank">HCL Technologies, India</a></h3>
+			<p><strong>Role:</strong> Lead C++ Developer</p>
+			<ul>
+			  <li><strong>HMI System for Defence Communication:</strong> Qt C++ based HMI system for Panasonic's defence communication.</li>
+			</ul>
+			<a href="https://www.hcltech.com" class="read-more" target="_blank">Read More</a>
+		  </div>
+
+		  <div class="project-card">
+			<p><strong>Role:</strong> Freelance C++ Developer</p>
+			<ul>
+			  <li><strong>Code Review Tool:</strong> C++ code review tool with Qt interface and Wt web functionality.</li>
+			  <li><strong>Trading System API:</strong> Qt UI for displaying trading data and charts.</li>
+			  <li><strong>Wise Owl Property Management:</strong> Web admin dashboard for property management.</li>
+			  <li><strong>Montal 2D Games:</strong> Developed 2D game using Qt QML.</li>
+			</ul>
+		  </div>
+
+		  <div class="project-card">
+			<h3><a href="https://www.hexosys.com" target="_blank">Hexosys SDN BHD, Malaysia</a></h3>
+			<p><strong>Role:</strong> Software Engineer</p>
+			<ul>
+			  <li><strong>USB Protocol Testing Application:</strong> C++ Qt-based USB protocol testing for firmware.</li>
+			</ul>
+			<a href="https://www.hexosys.com" class="read-more" target="_blank">Read More</a>
+		  </div>
+
+		  <div class="project-card">
+			<p><strong>Role:</strong> Trainee Software Engineer</p>
+			<ul>
+			  <li><strong>Pathmodeler USB Modelling Application:</strong> VC++ USB modelling application for device communication.</li>
+			  <li><strong>Internet Explorer Toolbar:</strong> Developed browser toolbar with customized features.</li>
+			  <li><strong>Void Trading:</strong> Worked on trading system functionalities for financial platforms.</li>
+			</ul>
+		  </div>
+		</div>
+	  </div>
+	</section>
+
+	<!-- Blogs Section -->
+	<section id="blogs" class="block-alt">
+	  <div class="container">
+		<h2>Blogs</h2>
+		<div class="blog-grid">
+			<div class="blog">
+				<h3><a href="https://ansifpi.medium.com/docker-postgresql-815ff8ba9499" target="_blank">Docker & PostgreSQL</a></h3>
+				<p>An in-depth guide on integrating Docker with PostgreSQL databases for efficient containerization and deployment.</p>
+				<a href="https://ansifpi.medium.com/docker-postgresql-815ff8ba9499" class="read-more" target="_blank">Read More</a>
+			</div>
+			<div class="blog">
+				<h3><a href="https://medium.com/@ansifpi/web-development-tips-5e4fbe9dc13e" target="_blank">Web Development Tips</a></h3>
+				<p>Explore some key tips for better web development practices, from performance optimization to best coding habits.</p>
+				<a href="https://medium.com/@ansifpi/web-development-tips-5e4fbe9dc13e" class="read-more" target="_blank">Read More</a>
+			</div>
+			<!-- Add more blog blocks here -->
+		</div>
+		<div class="medium-link">
+		<p>For more articles and posts, check out my <a href="https://medium.com/@ansifpi" target="_blank">Medium profile</a>.</p>
+		</div>
+	  </div>
+	</section>
+
+  <!-- Contact Section -->
+	<section id="contact" class="block-alt">
+	  <div class="container">
+		<h2>Contact Me</h2>
+		<br>
+		<p>If you would like to get in touch, feel free to reach out to me through email or WhatsApp:</p>
+		<br>
+		<ul>
+		  <strong>Emails:</strong> <a href="mailto:anspi07@gmail.com">anspi07@gmail.com</a>
+		  <strong>, </strong> <a href="mailto:ansif.pi@gmail.com">ansif.pi@gmail.com</a><br>
+		  <strong>Mobile/WhatsApp:</strong> <a href="https://wa.me/919544467629" target="_blank">+91 95444 67629</a>
+		</ul>
+		
+	  </div>
+	</section>
+
+
+  <footer>
+    <p>&copy; 2024 Ansif P I. All rights reserved.</p>
+  </footer>
 </body>
 </html>
