@@ -67,8 +67,10 @@
             font-size: 16px;
         }
         ul {
-            list-style: none;
-            padding: 0;
+ 
+	  list-style-type: disc; /* Or circle/square */
+	  margin-left: 20px; /* Indent the list */
+ 	  padding-left: 20px; /* Extra padding for clarity */
         }
         ul li {
             padding: 8px 0;
@@ -80,6 +82,9 @@
         ul li a:hover {
             text-decoration: underline;
         }
+	ul ul {
+	  list-style-type: circle; /* Nested lists look distinct */
+	}
     </style>
 </head>
 <body>
