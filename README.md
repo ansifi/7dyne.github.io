@@ -20,7 +20,7 @@ Tech entrepreneur with **17+ years of experience** in building products, managin
 
 ## 🔹 Looking to Collaborate With
 ✔️ VC firms needing technical due diligence  
-✔️ Founders needing part-time product/tech leadership  
+✔️ Founders needing product/tech leadership  
 ✔️ Accelerators or investors seeking hands-on startup support
 
 📨 **Open to advisory roles, remote development leadership, and venture support partnerships.**
