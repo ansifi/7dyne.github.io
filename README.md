@@ -7,7 +7,7 @@
 ## 🔹 Summary
 Tech entrepreneur with **17+ years of experience** in building products, managing distributed teams, and scaling startup operations. Founder of **SevenDyne**, launched in 2016 to deliver global app development services — grew organically by building client products across fintech, logistics, and e-commerce, and raised capital locally in 2019 to expand operations. Now advising early-stage startups and VC firms on **MVP delivery, due diligence, and fundraising readiness**, while remaining active in development via GitHub.
 
-## 🔹 What I Offer (Part-Time / Fractional)
+## 🔹 What I Offer
 - **Fractional CTO / Lead Developer**: Guide early-stage product teams, vet and hire developers, and design scalable software architecture.
 - **Tech Advisor / Venture Scout**: Assist VC firms with product due diligence and technical team assessment in India and SEA.
 - **Startup Fundraising Consultant**: Help founders craft compelling pitch decks, structure early-stage funding rounds, and prep for investor meetings.
