@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -531,6 +531,103 @@
         color: #adb5bd;
     }
     
+    /* New Experience Section Styles */
+    .experience-section {
+        background: linear-gradient(135deg, #f8f9fa 0%, #edf2f7 100%);
+        border-radius: 12px;
+        padding: 30px;
+        margin: 30px 0;
+        border: 1px solid #e2e8f0;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .experience-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        background: var(--accent);
+    }
+    
+    .experience-title {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .experience-title h3 {
+        font-size: 24px;
+        color: var(--primary);
+        margin: 0;
+    }
+    
+    .experience-title i {
+        font-size: 28px;
+        color: var(--accent);
+    }
+    
+    .experience-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .experience-card {
+        flex: 1;
+        min-width: 200px;
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        border-top: 3px solid var(--primary);
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    
+    .experience-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    
+    .experience-card .icon {
+        font-size: 40px;
+        color: var(--primary);
+        margin-bottom: 15px;
+    }
+    
+    .experience-card h4 {
+        color: var(--primary);
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+    
+    .experience-card p {
+        font-size: 16px;
+        color: var(--gray);
+        margin: 0;
+    }
+    
+    .tech-stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 20px;
+        justify-content: center;
+    }
+    
+    .tech-item {
+        background: rgba(26, 58, 108, 0.1);
+        color: var(--primary);
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    
     @media (max-width: 768px) {
         .header-content {
             flex-direction: column;
@@ -572,6 +669,10 @@
         .footer-links a {
             justify-content: center;
         }
+        
+        .experience-card {
+            min-width: 100%;
+        }
     }
     </style>
 </head>
@@ -610,6 +711,52 @@
                 <h2>Innovative Technology Solutions</h2>
                 <p>Sevendyne Consultancy Services LLP is a premier technology solutions provider with a global presence, delivering cutting-edge software development and consulting services to businesses worldwide.</p>
                 <p>With our headquarters in London and development centers across Europe and Asia, we bring together the best talent to solve complex business challenges through innovative technology solutions.</p>
+                
+                <!-- New Experience Section -->
+                <div class="experience-section">
+                    <div class="experience-title">
+                        <i class="fas fa-code"></i>
+                        <h3>Application Development Expertise Since 2016</h3>
+                    </div>
+                    <p>For over 8 years, Sevendyne has been at the forefront of application development, delivering robust solutions across diverse technology stacks. Our experienced team has successfully implemented projects using:</p>
+                    
+                    <div class="experience-content">
+                        <div class="experience-card">
+                            <div class="icon"><i class="fab fa-python"></i></div>
+                            <h4>Python</h4>
+                            <p>Django, Flask, and data science applications</p>
+                        </div>
+                        <div class="experience-card">
+                            <div class="icon"><i class="fab fa-node-js"></i></div>
+                            <h4>Node.js</h4>
+                            <p>Scalable backend systems and APIs</p>
+                        </div>
+                        <div class="experience-card">
+                            <div class="icon"><i class="fab fa-java"></i></div>
+                            <h4>Java</h4>
+                            <p>Enterprise applications and Android development</p>
+                        </div>
+                        <div class="experience-card">
+                            <div class="icon"><i class="fas fa-copyright"></i></div>
+                            <h4>C++</h4>
+                            <p>High-performance systems and embedded solutions</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-item">Ruby on Rails</span>
+                        <span class="tech-item">PHP</span>
+                        <span class="tech-item">.NET</span>
+                        <span class="tech-item">React</span>
+                        <span class="tech-item">Angular</span>
+                        <span class="tech-item">Vue.js</span>
+                        <span class="tech-item">Swift</span>
+                        <span class="tech-item">Kotlin</span>
+                        <span class="tech-item">Go</span>
+                        <span class="tech-item">Rust</span>
+                    </div>
+                </div>
+                <!-- End Experience Section -->
                 
                 <div class="highlight-box">
                     <p><strong>Official Company Name:</strong> Sevendyne Consultancy Services LLP</p>
